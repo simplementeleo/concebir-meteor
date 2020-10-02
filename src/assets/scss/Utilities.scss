@@ -1,0 +1,27 @@
+.d-none {
+    display: none;
+  }
+.main-input {
+    position: relative;
+    input.input-text-concebir {
+        border: none;
+        border-bottom: 1px solid #07a70793;
+        width: 100%;
+        transition: all .1s ease-in-out;
+        padding: 10px;
+        &:focus {
+            border-bottom: 1px solid green;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+    .icon {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        color: #666666;
+    }
+}
+.c-pointer {
+    cursor: pointer;
+} 

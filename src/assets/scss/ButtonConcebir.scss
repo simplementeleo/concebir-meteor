@@ -1,0 +1,24 @@
+
+.button-concebir {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 100%;
+    &.button-concebir-no-bg {
+        background: white;
+    }
+    &.button-concebir-default {
+        background: linear-gradient(to right, #18481ce8, #3ecc3ead) !important;
+        color: white;
+        transition: all ease-in-out 0.2s !important;
+        &:hover {
+
+            background: linear-gradient(to right, #4fc059e8, #04b304b4) !important;
+            &p{
+                color: red;
+            }
+        }
+    }
+
+}

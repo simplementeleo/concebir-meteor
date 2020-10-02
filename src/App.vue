@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Layaout></Layaout>
+    <layaout></layaout>
   </div>
 </template>
 <script>
@@ -13,8 +13,6 @@ export default {
 }
 </script>
 <style lang="scss">
-  .d-none {
-    display: none;
-  }
+  @import './assets/scss/Utilities.scss';
 </style>
 

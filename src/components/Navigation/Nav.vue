@@ -1,10 +1,22 @@
 <template>
     <div>
-        <b-nav :class="['nav-me', { 'd-none': !status }]">
-            <b-nav-item active>Active</b-nav-item>
-            <b-nav-item>Link</b-nav-item>
-            <b-nav-item>Another Link</b-nav-item>
-            <b-nav-item disabled>Disabled</b-nav-item>
+        <b-nav :class="['nav-me', 'pt-2', 'animate__animated', 'animate_backInDown', 'd-flex', 'justify-content-between', 'align-items-center', { 'd-none': !isActive }]">
+            <b-nav-item>
+                <font-awesome-icon icon="angle-left" />
+                Atras
+            </b-nav-item>
+            <img src="../../assets/logo.png" width="70" class="img-fluid" alt="Siempre a tu servicio">
+
+            <b-dropdown class="dropdown-concebir" variant="#fff">
+                <template v-slot:button-content class="d-flex align-items-center btn-primary">
+                    <img src="../../assets/users/1.jpg" width="35" class="img-fluid rounded-circle">
+                    <span class="ml-3">Taylor Kigman</span>
+                </template>
+                <b-dropdown-item href="#">Mi cuenta</b-dropdown-item>
+                <b-dropdown-item href="#">Salir</b-dropdown-item>
+            </b-dropdown>
+
+
         </b-nav>
     </div>
 </template>
@@ -12,14 +24,30 @@
 
     .nav-me {
         position: fixed;
-        background: red;
-        padding-left: 5em;
+        background: white;
+        padding-left: 15em;
         width: 100%;
+        .nav-item {
+           a {
+                color: #333;
+           }
+        }
+        .btn-secondary {
+            background: #fff !important;
+            color: #333;
+            &:hover, &:focus, &:active{
+                background: #fff !important;
+            }
+        }
     }
     
 </style>
 <script>
 export default {
-    props: ['status']
+    computed: {
+         isActive() {
+            return localStorage.getItem('start') == 'input' ? true : false
+        }
+    }
 }
 </script>

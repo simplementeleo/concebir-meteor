@@ -1,19 +1,20 @@
 <template>
     <div>
-        <Sidebar :status="false"></Sidebar>
-        <Nav :status="false"></Nav>
-        <Content></Content>
+        <sidebar /> 
+        <navbar />
+        <concebir />
     </div>
 </template>
 <script>
-    import Sidebar from '../Navigation/Sidebar'
-    import Nav from '../Navigation/Nav'
-    import Content from './Content'
+    import sidebar from '../Navigation/Sidebar'
+    import navbar from '../Navigation/Nav'
+    import concebir from './Content'
     export default {
+        name: 'layaout',
         components: {
-            Sidebar,
-            Nav,
-            Content
+            sidebar,
+            navbar,
+            concebir
         }
     }
 </script>
