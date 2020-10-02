@@ -44,7 +44,7 @@ import router from '../../router'
                     },
                     {
                         icon: 'calendar',
-                        url: '#',
+                        url: 'Citas',
                         name: 'Citas'
                     },
                     {

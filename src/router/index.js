@@ -33,6 +33,11 @@ const routes = [
     name: 'Sedes',
     component: () => import('../views/Sedes.vue')
   },
+  {
+    path: '/citas',
+    name: 'Citas',
+    component: () => import('../views/Citas.vue')
+  },
   
 ]
 
