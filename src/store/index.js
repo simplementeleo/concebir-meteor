@@ -12,10 +12,11 @@ export default new Vuex.Store({
         username: 'admin',
         pass: 'admin'
     },
-
+    show: false
 
   },
   mutations: {
+
     _Login(state, data) {
       if (state.user.username == data.user && state.user.pass == data.pass) {
         Swal.fire({
@@ -23,7 +24,10 @@ export default new Vuex.Store({
             title: 'Bienvenido!',
         });
         localStorage.setItem('start','input');
-        router.push({name: 'Home'})
+        router.push({name: 'Dashboard'})
+        // setTimeout(()=> {
+        //   this.show()
+        // },200)
 
       }else{
         Swal.fire({
@@ -32,7 +36,8 @@ export default new Vuex.Store({
             text: 'Datos incorrectos...',
         });
       }
-    }
+    },
+    
   },
   mounted(){}
 })

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <b-nav :class="['nav-me', 'pt-2', 'animate__animated', 'animate_backInDown', 'd-flex', 'justify-content-between', 'align-items-center', { 'd-none': !isActive }]">
+        <b-nav
+            :class="['nav-me', 'pt-2', 'animate__animated', 'animate_backInDown', 'd-flex', 'justify-content-between', 'align-items-center', { 'd-none': false }]">
             <b-nav-item>
                 <font-awesome-icon icon="angle-left" />
                 Atras
@@ -13,7 +14,7 @@
                     <span class="ml-3">Taylor Kigman</span>
                 </template>
                 <b-dropdown-item href="#">Mi cuenta</b-dropdown-item>
-                <b-dropdown-item href="#">Salir</b-dropdown-item>
+                <b-dropdown-item @click="_Loguout()">Salir</b-dropdown-item>
             </b-dropdown>
 
 
@@ -21,33 +22,41 @@
     </div>
 </template>
 <style lang="scss" scoped>
-
     .nav-me {
         position: fixed;
         background: white;
         padding-left: 15em;
         width: 100%;
+        z-index: 1;
+
         .nav-item {
-           a {
+            a {
                 color: #333;
-           }
+            }
         }
+
         .btn-secondary {
             background: #fff !important;
             color: #333;
-            &:hover, &:focus, &:active{
+
+            &:hover,
+            &:focus,
+            &:active {
                 background: #fff !important;
             }
         }
     }
-    
 </style>
 <script>
-export default {
-    computed: {
-         isActive() {
-            return localStorage.getItem('start') == 'input' ? true : false
+    import router from '../../router'
+    export default {
+        methods: {
+            _Loguout() {
+                localStorage.removeItem('start')
+                router.push({
+                    path: '/'
+                })
+            }
         }
     }
-}
 </script>

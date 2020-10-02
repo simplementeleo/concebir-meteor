@@ -19,6 +19,7 @@ export default {
 <style lang="scss" scoped>
 
 .bg-home {
+    background-color: white;
     background: url('../assets/bg-home.png') no-repeat;
     background-size: cover;
     background-position: right;
@@ -26,6 +27,7 @@ export default {
     width: 100%;
     height: 100%;
     overflow: auto;
+    z-index: 3;
 }
     
 </style>

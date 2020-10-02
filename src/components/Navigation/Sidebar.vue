@@ -1,24 +1,25 @@
 <template>
     <div>
-
-
-
-        <b-list-group :class="['sidebar-left', 'animate__animated', 'animate_backInLeft', { 'd-none': !isActive }]">
+        <b-list-group :class="['sidebar-left', { 'd-none': false }]">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <img src="../../assets/users/1.jpg" class="img-fluid rounded-circle mt-5" alt="User profile">
                 <h3 class="text-center my-3 text-white">Taylor Kigman</h3>
                 <scrollArrow class="arrow-left" />
             </div>
-            <b-list-group-item v-for="(item, index) in items" v-bind:key="index" class="d-flex align-items-center ">
+            <b-list-group-item v-for="(item, index) in items" v-bind:key="index" :to="{name: item.url }" class="d-flex align-items-center ">
                 <font-awesome-icon icon="home" />
                 <p>{{ item.name }} </p>
             </b-list-group-item>
+            <div class="d-flex align-items-center list-group-item" @click="_Loguout()">
+                <font-awesome-icon icon="home" />
+                <p> Salir </p>
+            </div>
         </b-list-group>
-
     </div>
 </template>
 <script>
 import scrollArrow from '../Utilities/Scrollarrow'
+import router from '../../router'
     export default {
         components: {
             scrollArrow
@@ -26,15 +27,15 @@ import scrollArrow from '../Utilities/Scrollarrow'
         data() {
             return {
                 items: [{
-                        url: '#',
+                        url: 'Dashboard',
                         name: 'Bienvenido'
                     },
                     {
-                        url: '#',
+                        url: 'Sedes',
                         name: 'Buscar médicos por sede'
                     },
                     {
-                        url: '#',
+                        url: 'Medicos',
                         name: 'Ver todos los médicos'
                     },
                     {
@@ -65,21 +66,23 @@ import scrollArrow from '../Utilities/Scrollarrow'
                         url: '#',
                         name: 'Sedes'
                     },
-                    {
-                        url: '#',
-                        name: 'Salir'
-                    },
+                   
                 ]
             }
         },
-        computed: {
-            isActive() {
-                return localStorage.getItem('start') == 'input' ? true : false
+        methods: {
+            _Loguout(){
+                localStorage.removeItem('start')
+                router.push({name: 'Home'})
             }
         },
-        mounted() {
-            console.log(this.isActive)
-        }
+        computed: {
+            isActive(){
+                setTimeout(() => {
+                    return localStorage.getItem('start') == 'input' ? true : false
+                }, 200);
+            }
+        },
     }
 </script>
 <style lang="scss" scoped>
@@ -90,7 +93,7 @@ import scrollArrow from '../Utilities/Scrollarrow'
         background-size: cover;
         background-position: right;
         border-radius: 0;
-        z-index: 1;
+        z-index: 2;
         overflow: auto;
         max-width: 235px;
         width: 235px;

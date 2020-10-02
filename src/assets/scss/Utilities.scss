@@ -25,3 +25,64 @@
 .c-pointer {
     cursor: pointer;
 } 
+.container-concebir {
+    padding: 5em 1em 1em 17em;
+}
+
+.button-concebir {
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    padding: 10px 22px;
+    width: 100%;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+
+    p {
+        margin-bottom: 0;
+        transition: all 0.2s ease-in-out;
+    }
+    .icon {
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        transform: translate(-5px, -5px)
+    }
+
+    &:hover p {
+        transform: scale(0);
+    }
+    &:hover .icon {
+        margin-right: 40%;
+    }
+
+
+    &.button-concebir-no-bg {
+        background: white !important;
+        color: #333 !important;
+        box-shadow: none !important;
+    }
+    
+    &.button-concebir-default {
+        background-size: 100% 100%, 0% 0%;
+        background: linear-gradient(to left, #18481ce8, #3ecc3ead);
+        color: white;
+        transition: all ease-in-out 0.2s;
+
+
+        &:hover {
+            background: linear-gradient(to left, #4fc059e8, #04b304b4);
+        }
+    }
+    &.animation {
+        transition: all ease-in-out 0.2s;
+        box-shadow: 1px 6px 10px #00000026;
+
+        &:hover {
+            transform: translateY(5px);
+            box-shadow: none;
+        }
+    }
+
+}

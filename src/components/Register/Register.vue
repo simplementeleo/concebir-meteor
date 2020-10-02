@@ -69,7 +69,7 @@
                     <h4>Ingresa tus datos</h4>
                 </div>
                 <hr>
-                <form @submit.prevent="register(newUser.stepTwo, selected)" class="mt-5">
+                <form @submit.prevent="register(newUser, selected)" class="mt-5">
 
                     <b-form-select v-model="selected" :options="options"></b-form-select>
 
@@ -184,7 +184,9 @@
             },
             register(elms, selected){
                 const data = Object.create(elms);
-                data.documentType = selected;
+                data.stepTwo.documentType = selected;
+
+                // Data register
                 console.log(data)
             }
         }
@@ -215,53 +217,6 @@
         }
     }
 
-    .button-concebir {
-        border: none;
-        outline: none;
-        border-radius: 35px;
-        padding: 10px 22px;
-        width: 100%;
-        font-weight: 600;
-        transition: all 0.2s ease-in-out;
-
-        p {
-            margin-bottom: 0;
-            transition: all 0.2s ease-in-out;
-        }
-        .icon {
-            transition: all 0.2s ease-in-out;
-        }
-
-        &:hover {
-            transform: translate(-5px, -5px)
-        }
-
-        &:hover p {
-            transform: scale(0);
-        }
-        &:hover .icon {
-            margin-right: 40%;
-        }
-
-
-        &.button-concebir-no-bg {
-            background: white;
-        }
-
-        &.button-concebir-default {
-            background-size: 100% 100%, 0% 0%;
-            background: linear-gradient(to left, #18481ce8, #3ecc3ead) !important;
-            color: white;
-            transition: all ease-in-out 0.2s;
-
-
-            &:hover {
-                background: linear-gradient(to left, #4fc059e8, #04b304b4) !important;
-
-            }
-        }
-
-    }
     select {
         border: none;
         outline: none;
