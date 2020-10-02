@@ -7,11 +7,11 @@
                 <scrollArrow class="arrow-left" />
             </div>
             <b-list-group-item v-for="(item, index) in items" v-bind:key="index" :to="{name: item.url }" class="d-flex align-items-center ">
-                <font-awesome-icon icon="home" />
+                <!-- <font-awesome-icon :icon="['fas', item.icon]" /> -->
                 <p>{{ item.name }} </p>
             </b-list-group-item>
             <div class="d-flex align-items-center list-group-item" @click="_Loguout()">
-                <font-awesome-icon icon="home" />
+                <!-- <font-awesome-icon :icon="['fas','sign-out']" /> -->
                 <p> Salir </p>
             </div>
         </b-list-group>
@@ -26,43 +26,54 @@ import router from '../../router'
         },
         data() {
             return {
-                items: [{
+                items: [
+                    {
+                        icon: 'fa-tachometer',
                         url: 'Dashboard',
                         name: 'Bienvenido'
                     },
                     {
+                        icon: 'search',
                         url: 'Sedes',
                         name: 'Buscar médicos por sede'
                     },
                     {
+                        icon: 'search',
                         url: 'Medicos',
                         name: 'Ver todos los médicos'
                     },
                     {
+                        icon: 'calendar',
                         url: '#',
                         name: 'Citas'
                     },
                     {
+                        icon: 'icon',
                         url: '#',
                         name: 'Pagos'
                     },
                     {
+                        icon: 'icon',
                         url: '#',
                         name: 'Horarios'
                     },
                     {
+                        icon: 'icon',
                         url: '#',
                         name: 'Médicos'
                     },
                     {
+                        icon: 'icon',
                         url: '#',
                         name: 'Paciente'
                     },
                     {
+                        icon: 'icon',
                         url: '#',
                         name: 'Especialidades'
                     },
                     {
+                        icon: 'icon',
                         url: '#',
                         name: 'Sedes'
                     },
