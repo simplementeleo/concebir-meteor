@@ -2,7 +2,7 @@
     <div>
         <b-nav
             :class="['nav-me', 'pt-2', 'animate__animated', 'animate_backInDown', 'd-flex', 'justify-content-between', 'align-items-center', { 'd-none': false }]">
-            <b-nav-item>
+            <b-nav-item onclick="javascript:history.back()">
                 <font-awesome-icon icon="angle-left" />
                 Atras
             </b-nav-item>
