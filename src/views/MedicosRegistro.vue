@@ -60,7 +60,7 @@
 
                 <button @click="row.toggleDetails"
                     :class="['button-concebir-default', 'animation','button-concebir', 'button-concebir-button', 'd-flex', 'button-concebir', 'justify-content-around', 'align-items-center','animate__animated animate__fadeInTopLeft']">
-                    <p> {{ row.detailsShowing ? 'Ocultar' : 'Ver'}} Detalles </p>
+                    <p> {{ row.detailsShowing ? 'Ocultar' : 'Ver'}} </p>
                     <font-awesome-icon :icon="['fas',  row.detailsShowing ? 'times' : 'plus']" class="icon" />
                 </button>
             </template>
@@ -91,7 +91,7 @@
 
                     <div class="mt-4">
                         <button @click="row.toggleDetails" class="btn-outline m-2">
-                            Ocultar Detalles
+                            Ocultar
                         </button>
                         <button class="btn-outline m-2 trash">
                             <font-awesome-icon icon="trash" />
