@@ -49,32 +49,32 @@ import router from '../../router'
                     },
                     {
                         icon: 'icon',
-                        url: '#',
+                        url: 'Pagos',
                         name: 'Pagos'
                     },
                     {
                         icon: 'icon',
-                        url: '#',
+                        url: 'Horarios',
                         name: 'Horarios'
                     },
                     {
                         icon: 'icon',
-                        url: '#',
+                        url: 'MedicosRegistro',
                         name: 'Médicos'
                     },
                     {
                         icon: 'icon',
-                        url: '#',
-                        name: 'Paciente'
+                        url: 'Pacientes',
+                        name: 'Pacientes'
                     },
                     {
                         icon: 'icon',
-                        url: '#',
+                        url: 'Especialidades',
                         name: 'Especialidades'
                     },
                     {
                         icon: 'icon',
-                        url: '#',
+                        url: 'SedesRegistro',
                         name: 'Sedes'
                     },
                    
@@ -110,6 +110,9 @@ import router from '../../router'
         width: 235px;
         scrollbar-width: thin;
         border-radius: 0 100px 100px 0;
+        @media(max-width: 767px) {
+            display: none;
+        }
         &::-webkit-scrollbar {
             width: 0px;
         }

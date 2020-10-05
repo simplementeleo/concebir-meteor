@@ -24,12 +24,12 @@ const routes = [
     component: () => import('../views/Dashboard.vue')
   },
   {
-    path: '/medics-search',
+    path: '/buscar-medicos',
     name: 'Medicos',
     component: () => import('../views/Medicos.vue')
   },
   {
-    path: '/sedes',
+    path: '/buscar-sedes',
     name: 'Sedes',
     component: () => import('../views/Sedes.vue')
   },
@@ -37,6 +37,36 @@ const routes = [
     path: '/citas',
     name: 'Citas',
     component: () => import('../views/Citas.vue')
+  },
+  {
+    path: '/pagos',
+    name: 'Pagos',
+    component: () => import('../views/Pagos.vue')
+  },
+  {
+    path: '/horarios',
+    name: 'Horarios',
+    component: () => import('../views/Horarios.vue')
+  },
+  {
+    path: '/medicos',
+    name: 'MedicosRegistro',
+    component: () => import('../views/MedicosRegistro.vue')
+  },
+  {
+    path: '/pacientes',
+    name: 'Pacientes',
+    component: () => import('../views/Pacientes.vue')
+  },
+  {
+    path: '/especialidades',
+    name: 'Especialidades',
+    component: () => import('../views/Especialidades.vue')
+  },
+  {
+    path: '/sedes',
+    name: 'SedesRegistro',
+    component: () => import('../views/SedesRegistro.vue')
   },
   
 ]

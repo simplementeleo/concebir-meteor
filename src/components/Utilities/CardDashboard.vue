@@ -1,7 +1,7 @@
 <template>
     <b-col cols="12" sm="12" md="4">
         <router-link :to="{ name: url }">
-            <div class="card-dashboard d-flex flex-column justify-content-center align-items-center p-4 animate__animated animate__fadeInTopLeft"
+            <div class="card-dashboard d-flex flex-column justify-content-center align-items-center p-4 animate__animated animate__fadeInTopLeft mt-4"
                 :style="{ 'box-shadow': '3px 13px 22px' + shadow, 'animation-delay': delay }">
                 <font-awesome-icon :icon="['fas', icon]" :style="{ 'background': bg }"
                     class="icon d-flex flex-column justify-content-center align-items-center" />

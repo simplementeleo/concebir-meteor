@@ -2,6 +2,7 @@
     display: none;
 }
 
+
 .main-input {
     position: relative;
 
@@ -33,6 +34,9 @@
 
 .container-concebir {
     padding: 5em 1em 1em 17em;
+    @media(max-width: 767px) {
+        padding: 5em 1em 1em 1em;
+    }
 }
 
 .button-concebir {
@@ -100,12 +104,11 @@
     max-width: 200px;
     background: #6bd6c7 !important;
     height: 44px;
-
+    outline: none;
     &:active,
     &:focus {
         outline: none;
     }
-
     &:hover {
         background: #4da196 !important;
     }
@@ -114,3 +117,35 @@
         font-size: 0;
     }
 }
+
+.btn-outline {
+    border-radius: 50px;
+    padding: 4px 25px;
+    border: none;
+    color: whitesmoke;
+    background: #6bd6c7;
+    font-weight: bold;
+    box-shadow: 0 4px 15px #00000026;
+    outline: none;
+    transition: all .2s ease-in-out;
+    &:active,
+    &:focus {
+        outline: none;
+    }
+    &.trash {
+        background: #dc3545;
+    }
+    &.pencil {
+        background: #007bff;
+    }
+    &.status {
+        &.enable {
+            background: #24b75f;
+        }
+        &.disabled {
+            background: #f16464;
+        }
+    }
+}
+
+$sm: 767px;

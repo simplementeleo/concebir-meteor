@@ -1,6 +1,6 @@
 <template>
-        <b-col cols="12" sm="12" md="4">
-            <div class="card-medic p-4 mt-4 animate__animated animate__flipInX" :style="{ 'animation-delay': delay }">
+        <b-col cols="12" sm="12" md="6" lg="4">
+            <div class="card-medic p-4 mt-4 animate__animated animate__fadeInTopLeft" :style="{ 'animation-delay': delay }">
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <img :src="require(`../../assets/medics/${image}`)" class="img-fluid rounded-circle" alt="Medic">
                     <h4 class="mt-3 text-center"> {{ name }} </h4>

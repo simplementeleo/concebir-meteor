@@ -1,6 +1,6 @@
 <template>
     <div class="container-concebir">
-        <div>
+        <div class="mt-5">
             <h4>Seleccione el Doctor</h4>
             <b-row>
                  <card-medic
