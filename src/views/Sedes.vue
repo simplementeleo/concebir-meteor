@@ -1,6 +1,6 @@
 <template>
     <div class="container-concebir">
-        <h4>Seleccione la Sede</h4>
+        <h4 class="mt-5">Seleccione la Sede</h4>
         <b-row>
             <card-vouce v-for="(clinic, index) in clinics" v-bind:key="index" :image="clinic.image" :name="clinic.name" :delay="clinic.delay" />
         </b-row>

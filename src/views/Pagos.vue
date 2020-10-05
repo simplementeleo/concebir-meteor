@@ -1,6 +1,6 @@
 <template>
     <div class="container-concebir">
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center mt-5">
             <h4>Pagos</h4>
 
 
